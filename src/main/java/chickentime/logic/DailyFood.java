@@ -14,4 +14,22 @@ public class DailyFood {
         this.fish = fish;
         this.vegetarian = vegetarian;
     }
+
+    //Needed for JSON serialization with JAX-RS
+    public DailyFood() {
+        this.meat = "";
+        this.fish = "";
+        this.vegetarian = "";
+    }
+
+    public boolean equals(DailyFood other) {
+        if(this.meat.equals(other.meat)
+                && this.fish.equals(other.fish)
+                && this.vegetarian.equals(other.vegetarian)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
